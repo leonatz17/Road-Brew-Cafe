@@ -53,4 +53,21 @@ function my_theme_widgets(){
 
 add_action('widgets_init', 'my_theme_widgets');
 
+function hide_services_from_blog( $query ) {
+    if ( ! is_admin() && $query->is_main_query() && $query->is_home() ) {
+        $query->set( 'cat', '-' . get_category_by_slug( 'services' )->term_id );
+    }
+}
+add_action( 'pre_get_posts', 'hide_services_from_blog' );
+
+function my_theme_setup() {
+    add_theme_support('custom-logo', [
+        "width"       => 50,
+        "height"      => 50,
+        "flex-height" => true,
+        "flex-width"  => true
+    ]);
+}
+add_action('after_setup_theme', 'my_theme_setup');
+
 ?>
