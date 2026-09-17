@@ -18,54 +18,62 @@
   </section>
 
   <!-- STORY: image + text -->
-  <section class="px-4 py-24">
+  <?php
+$story_query = new WP_Query( array(
+    'category_name'     => 'story',
+    'posts_per_page'    => 1,
+    'ignore_sticky_posts' => true,
+) );
+
+if ( $story_query->have_posts() ) : while ( $story_query->have_posts() ) : $story_query->the_post(); ?>
+
+<section class="px-4 py-24">
     <div class="mx-auto grid max-w-6xl grid-cols-1 items-center gap-16 md:grid-cols-2">
 
-      <div class="h-96 overflow-hidden rounded-2xl border border-[#D8CBBE] shadow-lg"
-           style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/road-brew.png'); background-size: cover; background-position: center;">
+      <div class="h-96 overflow-hidden rounded-2xl border border-[#D8CBBE] shadow-lg">
+        <?php the_post_thumbnail( 'large', array( 'class' => 'h-96 w-full object-cover' ) ); ?>
       </div>
 
       <div>
         <p class="text-xs font-medium uppercase tracking-[0.3em] text-[#C8A98A]">Since Day One</p>
         <h2 class="mt-4 font-serif text-3xl font-medium leading-snug text-[#2B2118]">
-          Every cup begins with a simple ritual.
+          <?php the_title(); ?>
         </h2>
-        <p class="mt-6 text-lg leading-relaxed text-[#6F5540]">
-          We source beans from farms that share our values, roast them in small batches, and brew them with patience. What we serve is more than coffee — it's a quiet moment in a busy day.
-        </p>
-        <p class="mt-4 text-lg leading-relaxed text-[#6F5540]">
-          From our first pour to your last sip, we make room for people. That's the Road Brew way.
-        </p>
+        <div class="mt-6 text-lg leading-relaxed text-[#6F5540]">
+          <?php the_content(); ?>
+        </div>
       </div>
 
     </div>
-  </section>
+</section>
+
+<?php endwhile; wp_reset_postdata(); endif; ?>
 
   <!-- VALUES -->
-  <section class="bg-[#2B2118] px-4 py-24">
+    <section class="bg-[#2B2118] px-4 py-24">
     <div class="mx-auto max-w-6xl">
-      <p class="text-center text-xs font-medium uppercase tracking-[0.3em] text-[#C8A98A]">What We Stand For</p>
+      <p class="text-center text-xs font-medium uppercase tracking-[0.3em] text-[#C8A98A]"><?php echo get_field('about_kicker'); ?></p>
       <h2 class="mt-4 text-center font-serif text-3xl font-medium text-[#F7F3ED]">
-        Three things we never compromise
+        <?php echo get_field('about_heading'); ?>
       </h2>
 
       <div class="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">
         <div class="border border-[#6F5540]/40 p-10 text-center">
-          <p class="font-serif text-4xl text-[#C8A98A]">01</p>
-          <h3 class="mt-4 text-xl font-medium text-[#F7F3ED]">Thoughtfully Sourced</h3>
-          <p class="mt-4 leading-relaxed text-[#D8CBBE]">Beans chosen from farms that care for their land, their pickers, and their craft.</p>
+          <p class="font-serif text-4xl text-[#C8A98A]"><?php echo get_field('value_1_no'); ?></p>
+          <h3 class="mt-4 text-xl font-medium text-[#F7F3ED]"><?php echo get_field('value_1_title'); ?></h3>
+          <p class="mt-4 leading-relaxed text-[#D8CBBE]"><?php echo get_field('value_1_text'); ?></p>
         </div>
 
         <div class="border border-[#6F5540]/40 p-10 text-center">
-          <p class="font-serif text-4xl text-[#C8A98A]">02</p>
-          <h3 class="mt-4 text-xl font-medium text-[#F7F3ED]">Slow-Roasted</h3>
-          <p class="mt-4 leading-relaxed text-[#D8CBBE]">Small batches, patient heat, and a nose for the exact moment it all clicks.</p>
+          <p class="font-serif text-4xl text-[#C8A98A]"><?php echo get_field('value_2_no'); ?></p>
+          <h3 class="mt-4 text-xl font-medium text-[#F7F3ED]"><?php echo get_field('value_2_title'); ?></h3>
+          <p class="mt-4 leading-relaxed text-[#D8CBBE]"><?php echo get_field('value_2_text'); ?></p>
         </div>
 
         <div class="border border-[#6F5540]/40 p-10 text-center">
-          <p class="font-serif text-4xl text-[#C8A98A]">03</p>
-          <h3 class="mt-4 text-xl font-medium text-[#F7F3ED]">Made for Community</h3>
-          <p class="mt-4 leading-relaxed text-[#D8CBBE]">Every table is a place to stay a while. You're not a customer — you're a regular.</p>
+          <p class="font-serif text-4xl text-[#C8A98A]"><?php echo get_field('value_3_no'); ?></p>
+          <h3 class="mt-4 text-xl font-medium text-[#F7F3ED]"><?php echo get_field('value_3_title'); ?></h3>
+          <p class="mt-4 leading-relaxed text-[#D8CBBE]"><?php echo get_field('value_3_text'); ?></p>
         </div>
       </div>
     </div>
@@ -75,7 +83,7 @@
   <section class="px-4 py-24">
     <div class="mx-auto max-w-3xl text-center">
       <p class="font-serif text-2xl italic leading-relaxed text-[#6F5540] md:text-3xl">
-        "Come for the coffee, stay for the moment."
+        <?php echo get_field('quote_text'); ?>
       </p>
       <div class="mx-auto mt-6 h-px w-16 bg-[#C8A98A]"></div>
     </div>

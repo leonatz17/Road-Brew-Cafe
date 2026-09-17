@@ -79,13 +79,20 @@
 
   <!-- LATEST POSTS -->
   <?php
-    $latest = new WP_Query( array(
+  $latest_args = array(
       'posts_per_page'      => 5,
       'ignore_sticky_posts' => true,
-      'category__not_in'    => array( get_category_by_slug('services')->term_id ),
-  ) );
+  );
 
-  if ( $latest->have_posts() ) : ?>
+  $services = get_category_by_slug( 'services' );
+  if ( $services ) {
+      $latest_args['category__not_in'] = array( $services->term_id );
+  }
+
+  $latest = new WP_Query( $latest_args );
+  ?>
+
+  <?php if ( $latest->have_posts() ) : ?>
 
     <section class="px-4 pb-24">
       <div class="mx-auto max-w-6xl">
