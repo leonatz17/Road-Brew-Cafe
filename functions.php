@@ -79,6 +79,15 @@ function my_theme_setup() {
 }
 add_action('after_setup_theme', 'my_theme_setup');
 
+function hide_services( $query ) {
+    if ( ! is_admin() && $query->is_main_query() && $query->is_home() ) {
+        $services = get_category_by_slug( 'services' );
+        if ( $services ) {
+            $query->set( 'cat', '-' . $services->term_id );
+        }
+    }
+}
+add_action( 'pre_get_posts', 'hide_services_from_blog' );
 
 
 ?>

@@ -4,8 +4,8 @@
     "fields": [
         {
             "key": "field_6aabec41dc5e2",
-            "label": "value 1 no",
-            "name": "value_1_no",
+            "label": "about card 1",
+            "name": "about_card_1",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -25,8 +25,8 @@
         },
         {
             "key": "field_6aabedb2dc5e3",
-            "label": "value 1 title",
-            "name": "value_1_title",
+            "label": "about card 1 title",
+            "name": "about_card_1_title",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -46,8 +46,8 @@
         },
         {
             "key": "field_6aabedc5dc5e4",
-            "label": "value 1 text",
-            "name": "value_1_text",
+            "label": "About card 1 text",
+            "name": "about_card_1_text",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -67,8 +67,8 @@
         },
         {
             "key": "field_6aabeecf13d5c",
-            "label": "value 2 no",
-            "name": "value_2_no",
+            "label": "About card 2",
+            "name": "about_card_2",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -88,8 +88,8 @@
         },
         {
             "key": "field_6aabef6e13d5d",
-            "label": "value 2 title",
-            "name": "value_2_title",
+            "label": "About card 2 title",
+            "name": "about_card_2_title",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -109,8 +109,8 @@
         },
         {
             "key": "field_6aabef7f13d5e",
-            "label": "value 2 text",
-            "name": "value_2_text",
+            "label": "About card 2 text",
+            "name": "about_card_2_text",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -130,8 +130,8 @@
         },
         {
             "key": "field_6aabef8b13d5f",
-            "label": "value 3 no",
-            "name": "value_3_no",
+            "label": "About card 3",
+            "name": "about_card_3",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -151,8 +151,8 @@
         },
         {
             "key": "field_6aabef9813d60",
-            "label": "value 3 title",
-            "name": "value_3_title",
+            "label": "About card 3 title",
+            "name": "about_card_3_title",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -172,8 +172,8 @@
         },
         {
             "key": "field_6aabefa413d61",
-            "label": "value 3 text",
-            "name": "value_3_text",
+            "label": "About card 3 text",
+            "name": "about_card_3_text",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -193,8 +193,8 @@
         },
         {
             "key": "field_6aabefb013d62",
-            "label": "quote text",
-            "name": "quote_text",
+            "label": "About quote text",
+            "name": "about_quote_text",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -234,5 +234,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1789680177
+    "modified": 1789734737
 }

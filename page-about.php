@@ -59,21 +59,21 @@ if ( $story_query->have_posts() ) : while ( $story_query->have_posts() ) : $stor
 
       <div class="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">
         <div class="border border-[#6F5540]/40 p-10 text-center">
-          <p class="font-serif text-4xl text-[#C8A98A]"><?php echo get_field('value_1_no'); ?></p>
-          <h3 class="mt-4 text-xl font-medium text-[#F7F3ED]"><?php echo get_field('value_1_title'); ?></h3>
-          <p class="mt-4 leading-relaxed text-[#D8CBBE]"><?php echo get_field('value_1_text'); ?></p>
+          <p class="font-serif text-4xl text-[#C8A98A]"><?php echo get_field('about_card_1'); ?></p>
+          <h3 class="mt-4 text-xl font-medium text-[#F7F3ED]"><?php echo get_field('about_card_1_title'); ?></h3>
+          <p class="mt-4 leading-relaxed text-[#D8CBBE]"><?php echo get_field('about_card_1_text'); ?></p>
         </div>
 
         <div class="border border-[#6F5540]/40 p-10 text-center">
-          <p class="font-serif text-4xl text-[#C8A98A]"><?php echo get_field('value_2_no'); ?></p>
-          <h3 class="mt-4 text-xl font-medium text-[#F7F3ED]"><?php echo get_field('value_2_title'); ?></h3>
-          <p class="mt-4 leading-relaxed text-[#D8CBBE]"><?php echo get_field('value_2_text'); ?></p>
+          <p class="font-serif text-4xl text-[#C8A98A]"><?php echo get_field('about_card_2'); ?></p>
+          <h3 class="mt-4 text-xl font-medium text-[#F7F3ED]"><?php echo get_field('about_card_2_title'); ?></h3>
+          <p class="mt-4 leading-relaxed text-[#D8CBBE]"><?php echo get_field('about_card_2_text'); ?></p>
         </div>
 
         <div class="border border-[#6F5540]/40 p-10 text-center">
-          <p class="font-serif text-4xl text-[#C8A98A]"><?php echo get_field('value_3_no'); ?></p>
-          <h3 class="mt-4 text-xl font-medium text-[#F7F3ED]"><?php echo get_field('value_3_title'); ?></h3>
-          <p class="mt-4 leading-relaxed text-[#D8CBBE]"><?php echo get_field('value_3_text'); ?></p>
+          <p class="font-serif text-4xl text-[#C8A98A]"><?php echo get_field('about_card_3'); ?></p>
+          <h3 class="mt-4 text-xl font-medium text-[#F7F3ED]"><?php echo get_field('about_card_3_title'); ?></h3>
+          <p class="mt-4 leading-relaxed text-[#D8CBBE]"><?php echo get_field('about_card_3_text'); ?></p>
         </div>
       </div>
     </div>
@@ -83,7 +83,7 @@ if ( $story_query->have_posts() ) : while ( $story_query->have_posts() ) : $stor
   <section class="px-4 py-24">
     <div class="mx-auto max-w-3xl text-center">
       <p class="font-serif text-2xl italic leading-relaxed text-[#6F5540] md:text-3xl">
-        <?php echo get_field('quote_text'); ?>
+        <?php echo get_field('about_quote_text'); ?>
       </p>
       <div class="mx-auto mt-6 h-px w-16 bg-[#C8A98A]"></div>
     </div>
